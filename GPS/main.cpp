@@ -12,6 +12,7 @@ int main() {
     for (size_t i = 0; i < satellites.size(); ++i) {
         string s;
         fin >> s >> satellites[i].name;
+        fin >> s >> satellites[i].dt_s;
         fin >> s >> satellites[i].t_oe;
         fin >> s >> satellites[i].WN;
         fin >> s >> satellites[i].e;
@@ -30,8 +31,10 @@ int main() {
         fin >> s >> satellites[i].c_ic;
         fin >> s >> satellites[i].c_is;
         fin >> s >> satellites[i].P;
-        fin >> s >> satellites[i].t_obs;
-        fin >> s >> satellites[i].dt_s;
+        int hour, min;
+        double sec;
+        fin >> s >> hour >> min >> sec;
+        satellites[i].t_obs = 2 * 86400 + hour * 3600 + min * 60 + sec;
     }
 
 
