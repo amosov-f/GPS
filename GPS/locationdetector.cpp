@@ -25,15 +25,6 @@ QPointF LocationDetector::getLocation(const vector<SatelliteData>& satellites) {
         data[i] = make_pair(pos, P);
     }
 
-    data[0] = make_pair(QVector3D(21277632.227, 2624628.197, 15798292.012),
-                        21245896.989);
-    data[1] = make_pair(QVector3D(14136001.009, -7530688.663, 21144548.488),
-                        21432492.103);
-    data[2] = make_pair(QVector3D(6380947.343, 22063437.865, 13292356.357),
-                        22216529.485);
-    data[3] = make_pair(QVector3D(13667726.877, 9545209.321, 21346910.550),
-                        20844087.288);
-
     Table initData(data.size() + 1, 7);
     initData[0][0] = "No.";
     initData[0][1] = "i";
@@ -72,10 +63,6 @@ QPointF LocationDetector::getLocation(const vector<SatelliteData>& satellites) {
     cout << initDist.toString().toStdString() << endl;
 
     vector<long double> x0(4);
-    //x0[0] = 2000000.312;
-    //x0[1] = 1000000.271;
-    //x0[2] = 5000000.781;
-    //x0[3] = -0.0001;
 
     vector<long double> loc = EquationSystemSolver::solve(new LocationShift(data), x0);
     long double X = loc[0];
