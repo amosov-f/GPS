@@ -75,7 +75,6 @@ QVector3D SatelliteData::getSatelliteLocation() const {
 
     //corrected longitude of ascending node
     long double Omega = Omega0 + (velOmega - velOmega_e) * t - velOmega_e * t_oe;
-    Omega = Omega0 + velOmega * t - velOmega_e * t_em;
     cout << "Omega = " << Omega << endl << endl;
 
     //result
