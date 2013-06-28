@@ -13,6 +13,9 @@ public:
     long double derPar(const vector<long double>& x, size_t i, size_t k) const;
 
     Matrix jacobi(const vector<long double>& x) const;
+private:
+
+    static const double INC = 0.0001;
 };
 
 #endif // FUNCTION_H

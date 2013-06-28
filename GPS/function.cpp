@@ -1,8 +1,6 @@
 #include "function.h"
 
 long double Function::derPar(const vector<long double>& x, size_t i, size_t k) const {
-    const long double INC = 0.00000001;
-
     vector<long double> x1 = x;
     x1[k] += INC;
     return (get(x1, i) - get(x, i)) / INC;
