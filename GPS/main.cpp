@@ -6,7 +6,7 @@
 using namespace Transforms;
 
 int main() {
-    ifstream fin("data.dat");
+    ifstream fin("../Data/data.dat");
 
     vector<SatelliteData> satellites(4);
     for (size_t i = 0; i < satellites.size(); ++i) {
