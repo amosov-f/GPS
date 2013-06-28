@@ -31,5 +31,4 @@ HEADERS += \
     table.h \
     transforms.h
 
-OTHER_FILES += \
-    ../GPS-build-Desktop_Qt_5_0_1_clang_64bit-_______/data.dat
+OTHER_FILES +=
