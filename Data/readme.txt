@@ -13,10 +13,11 @@ dn          - deviation of the mean motion
 velOmega    - rate of change of the longitude of the ascending node
 IDOT        - the rate of change of inclination
 c_uc        - quadrature amplitude correction of the argument of latitude
-c_us        1.189112663269e-05
-c_rc        141.1875
-c_rs        29.15625
-c_ic        -5.960464477539e-08
-c_is        1.788139343262e-07
-P           22508295.344
-t_obs       8 15 0.0
+c_us        - amplitude-phase correction of the argument of latitude
+c_rc        - quadrature amplitude correction radius of the orbit
+c_rs        - amplitude-phase correction radius of the orbit
+c_ic        - quadrature amplitude correction of the inclination
+c_is        - amplitude-phase correction of the inclination
+P           - pseudo-distace to satellite
+t_obs       - obscuration time
+t_sun		- how many days have passed since sunday? For example, now if tuesday, this parameter is 2.
