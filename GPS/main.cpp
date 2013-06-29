@@ -34,9 +34,10 @@ int main() {
         int hour, min;
         double sec;
         fin >> s >> hour >> min >> sec;
-        satellites[i].t_obs = 2 * 86400 + hour * 3600 + min * 60 + sec;
+        int sunday;
+        fin >> s >> sunday;
+        satellites[i].t_obs = sunday * 86400 + hour * 3600 + min * 60 + sec;
     }
-
 
     QPointF res = LocationDetector::getLocation(satellites);
 
